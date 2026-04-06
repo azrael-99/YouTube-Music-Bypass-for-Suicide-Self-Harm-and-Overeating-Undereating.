@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "YT Eternal Bypass - Self-Harm Warning",
+  "version": "2.0",
+  "description": "Permanently auto-bypasses YouTube & YouTube Music suicide/self-harm warning (bulletproof 2026+ edition)",
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://music.youtube.com/*"
+  ],
+  "icons": {
+    "24": "icon24.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "24": "icon24.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://music.youtube.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
